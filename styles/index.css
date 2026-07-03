@@ -46,7 +46,6 @@ main .contents > * {
     height:40px;
     border-radius:8px;
     letter-spacing:-0.02em;
-    
 }
 main .contents #users_birthday{/* input 태그 입력 전 상태 */
     border: 0.7px solid #000;
