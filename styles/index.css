@@ -1,0 +1,68 @@
+/* 시작레이아웃요소 가운데 배치하는 법 */
+/* 1. text-align */
+/* 2. margin */
+/* 3. flex */
+body{
+    /* display:flex; justify-content:center; */
+    /* text-align:center */
+    /* text-align은 인라인 자식, 자손에만 적용 */
+
+}
+main{
+    margin:0 auto;/* 디스플레이 가운데 정렬할때 많이 씀 */
+    background-image: url(../images/bg.jpg);
+    width: 402px; min-height: 874px;
+    background-size:contain;/* w h (px or %)*/
+    background-position:center;/* x y (px or % or 방향)*/
+}
+main .title {
+    padding-top:150px;
+    text-align: center;
+    margin-bottom:198px;
+}
+main .title p {
+    font-size:0.75em;
+    margin:0 0 10px;
+    letter-spacing: -0.02em;
+}
+main .title h1 {
+    font-size:1.5em;
+    font-weight:600;
+    letter-spacing: -0.02em;
+}
+main .title h1 em {font-weight:700;}
+main .contents {
+    display:flex;
+    flex-flow:column nowrap;
+    /* flex를 설정한 부모의 자식이 인라인일 경우, 자식이 자동으로 블록으로 인식된다. */
+    align-items:center;
+    /* 메인축(수직)의 반대 교차축(수평)이 1줄일때 가운데 정렬 */
+    gap:6px;
+    /* flex 설정 시 자식 사이 간격(자식에 주는 margin 효과와 동일) */
+    /* flex 설정한 부모의 자식이 인라인일 경우, 자식이 자동으로 블록으) */
+}
+main .contents > * {
+    width:250px;
+    height:40px;
+    border-radius:8px;
+    letter-spacing:-0.02em;
+    
+}
+main .contents #users_birthday{/* input 태그 입력 전 상태 */
+    border: 0.7px solid #000;
+    color:#000;/* 사용자가 입력했을 때 글자색상 */
+    font-size:0.75em;
+    text-align: center;
+}
+/* input 태그의 placehorder(안내문) 전용 선택자 글자색상 */
+main .contents #users_birthday::placeholder{color: rgba(0 0 0 0.4)
+}
+/* input 태그가 활성화되었을때(커서가 들어오고 입력되는 상황) */
+main .contents #users_birthday:focus {border-color:#f00}
+/* 버튼 */
+main .contents #birthday_result_btn{
+    background-color:#303030;
+    color:white;
+    font-size:0.94em;
+    font-weight:600;
+}
