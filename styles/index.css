@@ -9,6 +9,7 @@ body{
 
 }
 main{
+    position: relative;
     margin:0 auto;/* 디스플레이 가운데 정렬할때 많이 씀 */
     background-image: url(../images/bg.jpg);
     width: 402px; min-height: 874px;
@@ -65,3 +66,27 @@ main .contents #birthday_result_btn{
     font-size:0.94em;
     font-weight:600;
 }
+main .popup {
+    display: none;
+    position:absolute;
+    left:51px; top:324px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width:300px; height:225px;
+    border-radius:20px;
+    display:flex; flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    gap:30px;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+main .popup h2 {
+    font-size:0.875em;
+    font-weight:700;
+}
+main .popup .flower_lang {font-size:1.125em;}
+main .popup .result {
+    font-size:1.125em;
+    line-height:1.5;
+}
+main .popup .result em {font-weight:700;}
