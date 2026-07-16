@@ -20,10 +20,13 @@ popup_bg.style.display = 'none';
 //무조건 block을 쓰는게 아닌 그 선택자가 원래 가지고 있는 display속성으로 되돌리기
 //display:flex가 선택자의 원래 속성이라면, 자바스크립트도 display=flex
 //display가 선택자에 없었다면, 원래 태그 고유속성에 따라 display=block 또는 display=inline
+
+//팝업 띄우기
 function popup_show(){
     popup.style.display = 'flex';
     popup_bg.style.display = 'block';
 }
+//팝업 숨기기
 function popup_close(){
     popup.style.display = 'none';
     popup_bg.style.display = 'none';
