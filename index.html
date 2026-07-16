@@ -18,16 +18,17 @@
             <h1>나의 <em>탄생화</em> 찾기</h1>
         </div>
         <div class="contents">
-            <!-- <input type="date" id="birthday" name="birthday" placeholder="생일을 입력해주세요."> -->
-            <input id="users_birthday" placeholder="태어난 달을 숫자로 입력해주세요">
-            <button id="birthday_result_btn">나의 꽃과 꽃말 만나기</button>
+            <input type="number" maxlength="2" id="users_birthday" onclick="birthday12()" placeholder="태어난 달을 숫자로 입력해주세요">
+            <button type="button" id="birthday_result_btn" onclick="popup_show()">나의 꽃과 꽃말 만나기</button>
             <!-- a태그는 클릭 시 다른페이지로 이동 -->
             <!-- button 태그 클릭 시 범용기능 동적표현 -->
         </div>
         <div class="popup">
-            <h2>Birthday Month 12</h2>
-            <p class="flower_lang">꽃말 : 자기애, 자존심, 외로움</p>
+            <p class="sub_title">Birthday Month <span>12</span></p>
+            <p class="flower_lang">꽃말 : <em>자기애, 자존심, 외로움</em></p>
             <p class="result">당신의 탄생화는<br><em>'수선화'</em>입니다.</p>
+        </div>
+        <div class="popup_bg" onclick="popup_close()">
         </div>
     </main>
 </body>
